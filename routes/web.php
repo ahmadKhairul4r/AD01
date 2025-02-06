@@ -6,6 +6,11 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/',[HomeController::class,'dashboard'])->name('home');
 Route::get('/peserta',[HomeController::class,'peserta'])->name('data.peserta');
+Route::get('/data-peserta', [HomeController::class, 'index'])->name('data-peserta');
+Route::get('/edit-peserta/{id}', [HomeController::class, 'edit'])->name('edit.peserta');
+
+
+
 
 Route::get('/instruktur',[HomeController::class,'instruktur'])->name('data.instruktur');
 Route::get('/import-data-instruktur',[HomeController::class,'importdata_instruktur'])->name('importdata.instruktur');
