@@ -19,7 +19,7 @@
             <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Data Peserta</h5>
-                    <form action="{{ route('data-peserta') }}" method="GET">
+                    <form action="{{ route('search.peserta') }}" method="GET">
                         <div class="input-group mb-5">
                             <div class="form-outline">
                                 <input type="text" id="form1" name="cari" class="form-control" placeholder="Search">
@@ -35,6 +35,7 @@
                         <table class="table table-fixed">
                             <thead>
                                 <tr>
+                                    <th scope="col" style="white-space: nowrap; width: 50px;">No</th>
                                     <th scope="col" style="white-space: nowrap; width: 150px;">FullName</th>
                                     <th scope="col" style="white-space: nowrap; width: 100px;">Nickname</th>
                                     <th scope="col" style="white-space: nowrap; width: 200px;">Akun Plataran</th>
@@ -60,6 +61,7 @@
                             <tbody>
                                 @foreach ($data as $d)
                                 <tr >
+                                    <td>{{$loop->iteration}}</td>
                                     <td>{{$d->fullname}}</td>
                                     <td>{{$d->nickname}}</td>
                                     <td>{{$d->akun_plataran_sehat}}</td>

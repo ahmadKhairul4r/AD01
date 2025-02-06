@@ -17,21 +17,21 @@
               <h5 class="card-title">Permintaan Peserta Sub Devisi Jakarta</h5>
               <!-- List group with custom content -->
                 <ol class="list-decimal pl-5">
-                    @foreach ($data as $d)
+
                         <li class="d-flex list-item mb-3 p-3 border border-gray-300 rounded-lg shadow-md flex justify-between items-center">
                             <div class="flex flex-col space-y-1">
-                                <div><strong>Nama Lengkap:</strong> {{$d->fullname}}</div>
-                                <div><strong>Email:</strong> {{$d->email}}</div>
+                                <div><strong>Nama Lengkap:</strong> </div>
+                                <div><strong>Email:</strong> </div>
                             </div>
 
                             {{-- Action buttons --}}
                             <div class="ms-auto">
                                 <!-- Info button -->
-                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#verticalycentered{{$d->id}}">
+                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#verticalycentered">
                                     <i class="bi bi-exclamation-triangle"></i>
                                 </button>
                                 <!-- Vertically centered Modal -->
-                                <div class="modal fade" id="verticalycentered{{$d->id}}" tabindex="-1">
+                                <div class="modal fade" id="verticalycentered" tabindex="-1">
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -43,31 +43,31 @@
                                                     <div class="row mb-3">
                                                         <label class="col-sm-3 col-form-label">Nama Lengkap</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control" value="{{$d->fullname}}" disabled>
+                                                            <input type="text" class="form-control" value="" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-3">
                                                         <label class="col-sm-3 col-form-label">Nickname</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control" value="{{$d->nickname}}" disabled>
+                                                            <input type="text" class="form-control" value="" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-3">
                                                         <label class="col-sm-3 col-form-label">Akun Plataran</label>
                                                         <div class="col-sm-9">
-                                                            <input type="email" class="form-control" value="{{$d->email}}" disabled>
+                                                            <input type="email" class="form-control" value="" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-3">
                                                         <label class="col-sm-3 col-form-label">NIK</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control" value="{{$d->nik}}" disabled>
+                                                            <input type="text" class="form-control" value="" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-3">
                                                         <label class="col-sm-3 col-form-label">No HP</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control" value="{{$d->no_hp}}" disabled>
+                                                            <input type="text" class="form-control" value="" disabled>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -81,10 +81,10 @@
                                 <!-- End Vertically centered Modal-->
 
                                 <!-- Action button -->
-                                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#smallModal{{$d->id}}">
+                                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#smallModal">
                                     <i class="bi bi-info-circle"></i>
                                 </button>
-                                <div class="modal fade" id="smallModal{{$d->id}}" tabindex="-1">
+                                <div class="modal fade" id="smallModal" tabindex="-1">
                                     <div class="modal-dialog modal-sm">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -107,7 +107,6 @@
                                 </div><!-- End Small Modal-->
                             </div>
                         </li>
-                    @endforeach
                 </ol><!-- End with custom content -->
             </div>
           </div>
