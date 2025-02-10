@@ -2,15 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 
 
-Route::get('/',[HomeController::class,'dashboard'])->name('home');
+Route::get('dashboard',[HomeController::class,'dashboard'])->name('home');
+Route::get('login',[LoginController::class,'index'])->name('login');
+Route::post('login-proses',[LoginController::class,'login_proses'])->name('login-proses');
+
+// Dashboard Route
+Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('home')->middleware('auth');
+
 Route::get('/peserta',[HomeController::class,'peserta'])->name('data.peserta');
 Route::get('/data-peserta', [HomeController::class, 'index'])->name('data-peserta');
+
 Route::get('/edit-peserta/{id}', [HomeController::class, 'edit'])->name('edit.peserta');
-
-
-
+Route::put('/update-peserta/{id}', [HomeController::class, 'update'])->name('update.peserta');
+Route::delete('/delete-peserta/{id}', [HomeController::class, 'delete'])->name('delete.peserta');
 
 Route::get('/instruktur',[HomeController::class,'instruktur'])->name('data.instruktur');
 Route::get('/import-data-instruktur',[HomeController::class,'importdata_instruktur'])->name('importdata.instruktur');
