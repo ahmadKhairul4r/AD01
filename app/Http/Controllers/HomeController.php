@@ -10,18 +10,15 @@ use Illuminate\Support\Facades\Validator;
 class HomeController extends Controller
 {
     public function dashboard() {
-        $data = MemberModel::get(); // Kirim data Member ke dashboard
-        return view('home', compact('data'));
+        return view('home');
     }
 
     public function peserta(){
         $data = MemberModel::get(); // Kirim data Member ke dashboard
         return view('data-peserta', compact('data'));
     }
-
-
-    public function index(Request $request){
-        $keyword= $request->input('cari');
+    public function search_peserta(Request $request){
+        $keyword= $request->input('Search');
         $data = MemberModel:: where('nickname', 'like', "%".$keyword."%")->paginate(2);
         return view('data-peserta', compact('data'));
     }
