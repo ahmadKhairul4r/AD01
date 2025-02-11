@@ -19,7 +19,7 @@
             <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Data Peserta</h5>
-                    <form action="{{ route('search.peserta') }}" method="GET">
+                    <form action="" method="GET">
                         <div class="input-group mb-5">
                             <div class="form-outline">
                                 <input type="text" id="form1" name="cari" class="form-control" placeholder="Search">
