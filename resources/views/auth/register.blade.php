@@ -58,7 +58,7 @@
                                     @csrf
                                     <div class="col-12">
                                         <label class="form-label">Nama Lengkap</label>
-                                        <input type="text" name="name" class="form-control" value="{{ old('name')}}" autocomplete="name">
+                                        <input type="text" name="nama" class="form-control" value="{{ old('name')}}" autocomplete="name">
                                         @error('name')
                                             <small class="bg-warning">{{$message}}</small>
                                         @enderror

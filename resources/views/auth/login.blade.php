@@ -132,6 +132,15 @@
             });
         </script>
     @endif
+    @if (Session::has('sukses'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Registrasi Berhasil',
+                text: '{{ Session::get("sukses") }}'
+            });
+        </script>
+    @endif
 </body>
 
 </html>

@@ -9,7 +9,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li class="breadcrumb-item active">Data</li>
+                    <li class="breadcrumb-item active">Data (Client Side)</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -32,7 +32,7 @@
 
                   <!-- Table with stripped rows -->
                     <div class="table-responsive">
-                        <table class="table table-fixed">
+                        <table class="table datatable">
                             <thead>
                                 <tr>
                                     <th scope="col" style="white-space: nowrap; width: 50px;">No</th>

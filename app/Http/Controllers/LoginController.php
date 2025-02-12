@@ -26,7 +26,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($data)) {
             $request->session()->regenerate();
-            return redirect()->intended('/dashboard')->with('successs', 'Login berhasil!');
+            return redirect()->intended('dashboard')->with('successs', 'Login berhasil!');
         } else {
             return redirect()->route('login')->with('failed', 'Email atau Password Salah');
         }
@@ -53,20 +53,14 @@ class LoginController extends Controller
             'password' => Hash::make($request->password)
         ];
 
-        // Debugging: cek apakah data sudah benar
-        dd($data);
+
         User::create($data);
 
-        // $login =[
-        //     'email' => $request->email,
-        //     'password' => $request->password,
-        // ];
-        return redirect()->route('login')->with('success', 'Registrasi berhasil! Silakan login.');
-        // if (Auth::attempt($login)) {
-        //     return redirect()->intended('login')->with('successs', 'Login berhasil!');
-        // } else {
-        //     return redirect()->route('register')->with('failed', 'Email atau Password Salah');
-        // }
+        $login =[
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        return redirect()->route('login')->with('sukses', 'Registrasi berhasil! Silakan login.');
 
     }
 }

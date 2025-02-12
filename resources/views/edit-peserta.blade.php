@@ -21,7 +21,7 @@
                             <h5 class="card-title">Form Edit Peserta</h5>
                             <p>Silahkan Edit peserta sesuai dengan perubahan yang diinginkan</p>
                             <!-- Browser Default Validation -->
-                            <form class="row g-3" action="{{ route('update.peserta', ['id' => $data->id]) }}" method="POST">
+                            <form class="row g-3" action="{{ route('update-peserta', ['id' => $data->id]) }}" method="POST">
                                 @csrf
                                 @method('PUT')
 
